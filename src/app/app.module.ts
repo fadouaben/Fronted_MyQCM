@@ -12,7 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component'
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
-
+import { SousSkillsComponent } from './sous-skills/sous-skills.component';
+import { HttpClient } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     QcmComponent,
     LoginComponent,
     RegisterComponent,
-    FooterComponent
+    FooterComponent,
+    SousSkillsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,7 @@ import { FooterComponent } from './footer/footer.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
