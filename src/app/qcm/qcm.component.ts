@@ -31,7 +31,7 @@ export class QcmComponent implements OnInit{
   reponseUtilisateur:string='';
   veriferRep(){
     console.log(this.reponseUtilisateur);
-    if (this.reponseUtilisateur === this.qcmDtat.response){
+    if (this.reponseUtilisateur.trim() === this.qcmDtat.response.trim()){
       this.message = 'Bonne réponse !'
     }
     else{
