@@ -15,7 +15,7 @@
                                 <h2>{{ skill.valeur }}</h2>
                                 <ul>
                                   <li *ngFor="let sousSkill of sousSkills[skill.id]">
-                                    <h4>{{ sousSkill.valeur }}</h4>
+                                    <h4 (click)="selectSousSkill(sousSkill.valeur)">{{ sousSkill.valeur }}</h4>
                                   </li>
                                 </ul>
                             </li>

@@ -2,6 +2,8 @@ import { Component, NgModule, OnInit } from '@angular/core';
 import { Skill,SousSkill } from './skill.model';
 import { SkillService } from '../skill.service';
 import { CommonModule } from '@angular/common';
+import { SelectionService } from '../selection.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-skills',
@@ -13,7 +15,7 @@ import { CommonModule } from '@angular/common';
 export class SkillsComponent implements OnInit{
   skills : any[] = [];
   sousSkills:{[key:number]:any[]} = {};
-  constructor(private skillService: SkillService){
+  constructor(private router: Router,private skillService: SkillService, private selectServ:SelectionService){
     
   }
   ngOnInit(): void {
@@ -32,6 +34,10 @@ export class SkillsComponent implements OnInit{
 
     
       
+  }
+  selectSousSkill(sousSkill:string){
+    this.selectServ.setSelectedSousSkill(sousSkill);
+    this.router.navigate(['/qcm',sousSkill]);
   }
 
 

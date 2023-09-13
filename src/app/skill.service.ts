@@ -21,6 +21,10 @@ export class SkillService {
     return this.http.get<any[]>(sousSkillUrl);
   }
 
+  createQCMForSousSkill(sousSkillVal:string):Observable<any>{
+    return this.http.post<any>(`${this.baseurl}/quiz/create_qcm/`, {sous_skill_val:sousSkillVal},{headers:this.httpHeaders});
+  }
+
   getSkills(): Skill[] {
     return this.skills;
   }
