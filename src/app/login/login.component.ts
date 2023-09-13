@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit{
       'X-CSRFToken': this.csrfToken
     };
 
-    this.http.post('http://localhost:8000/user/signin/', this.form.getRawValue(), { headers }).subscribe(() => this.router.navigate(['/home']));
+    this.http.post('http://localhost:8000/user/signin/', this.form.getRawValue(), { headers }).subscribe(() => this.router.navigate(['/skills']));
 
   }
 }
