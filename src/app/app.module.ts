@@ -12,6 +12,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component'
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { MatiereComponent } from './matiere/matiere.component';
+import { HeaderComponent } from './header/header.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { FooterComponent } from './footer/footer.component';
     QcmComponent,
     LoginComponent,
     RegisterComponent,
-    FooterComponent
+    FooterComponent,
+    MatiereComponent,
+    HeaderComponent, 
+   
   ],
   imports: [
     BrowserModule,
